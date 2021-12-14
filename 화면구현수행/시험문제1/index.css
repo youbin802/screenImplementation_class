@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+
+    /* border-box  시험 */
+    box-sizing: border-box; 
+    list-style: none;
+}
+
+.container {
+    margin:0 auto;
+    width:450px;
+    border:1px solid #ccc;
+    
+    /* border-radius 시험 */
+    border-radius: 2%;
+    box-shadow: 2px 2px #333;
+}
+
+.day1 {
+    padding-top: 20px;
+    
+    /* text-align 시험*/
+    text-align: center;
+}
+
+.day1 h3 {
+    font-size: 1.2em;
+    color:#666;
+}
+
+.accent {
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    /* font-family 나올 수도 */
+    font-family: 'Jua' ,sans-serif;
+    font-size: 3.5em;
+    color:#222;
+}
+
+--
+
+.bar {
+    width:100%;
+    margin:60px auto 0 auto;
+    padding-left:15px;
+    height:40px;
+    background-color: #747474;
+    color:#fff;
+    font-size: 1.2em;
+    /* line-height 나올 수도 */
+    line-height: 40px;
+}
+
+.day2 {
+    width:420px;
+    /* auto 두번인거 나올 수도 */
+    margin:20px auto 20px auto;
+}
+
+.day2 ul {
+    list-style: none;
+    /* datshed 나올 수도 */
+    border:1px dashed #ccc;
+    height:60px;
+}
+
+/* ul: last-child 시험 */
+.day2 ul:last-child {
+    /* border-bottom 시험 */
+    border-bottom: none;
+}
+
+.item-title {
+    /* float left 나올 수도 */
+    float: left;
+    width:160px;
+    /* bold 나올 수도 */
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 60px;
+}
+
+.item-date {
+    float: left;
+    width:160px;
+    color:#222;
+    font-size: 1.2em;
+    line-height: 60px;
+}
+
+
+

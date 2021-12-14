@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- link 시험 -->
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>인치 &xhArr; 센티미터 단위 변환기</h2>
+        <div class="change">
+            <div class="box" id="source">
+    
+                <!-- onkeyup 시험 -->
+                <input type="text" id="s-value" onkeyup="convertier()">
+                <span  id="s-unit">inch</spanunit>
+            </div>
+
+            <!-- onclick 시험 -->
+            <span id="exchange" onclick="exUnit()"> &xhArr; </span>
+            <div class="box" id="target">
+                <input type="text" id="t-value">
+                <span id="t-unit">cm</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- script src 시험 -->
+    <script src="/index.js"></script>
+</body>
+</html>

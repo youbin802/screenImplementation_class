@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="day1">
+            <h3>우리가 입학한지</h3>
+            <p id="accent" class="accent"><span style="font-size: 0.6em; font-style: italic;">며칠?</span></p>
+        </div>
+        <div class="bar">기념일 표시</div>
+        <div class="day2">
+            <ul>
+                <li class="item-title">100일</li>
+                <li class="item-date" id="date100"></li>
+            </ul>
+            <ul>
+                <li class="item-title">200일</li>
+                <li class="item-date" id="date200"></li>
+            </ul>
+            <ul>
+                <li class="item-title">1년</li>
+                <li class="item-date" id="date365"></li>
+            </ul>
+            <ul>
+                <li class="item-title">1000일</li>
+                <li class="item-date" id="date1000"></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let now = new Date(); // # new Date
+        let firstDay = new Date('2020-03-02');
+        let toNow = now.getTime();// # getTime
+        let toFirst = firstDay.getTime(); //# getTime
+
+        let passedTime = toNow - toFirst;
+        // 날짜 차이 반올림
+        // # math.round 
+        let passedDay = Math.round(passedTime/(24*60*60*1000)); // 이 계산식은 나올 수도 있을 듯
+
+        document.querySelector('#accent').innerText = passedDay + "일";
+
+        calcdate(100);
+        calcdate(200);
+        calcdate(365);
+        calcdate(1000);
+
+        function calcdate(days) {
+            let future = toFirst + days*(1000*60*60*24);
+            let someday = new Date(future); //#new Date
+            let year = someday.getFullYear();  //#getFullYear
+            let month = someday.getMonth(); //# getMonth
+            let date = someday.getDate();//#getDate
+
+            document.querySelector("#date"+days).innerText = year + '년' + month + '월' + date + '일';
+        }
+    </script>
+</body>
+</html>
